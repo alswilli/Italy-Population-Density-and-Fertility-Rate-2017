@@ -50,7 +50,7 @@ var svg = d3.select("body")
 //}
 
 // Load Population Density and Fertility Rate .csv data by region
-d3.csv("actualpopdensitydata.csv", function(data) {
+d3.csv("popdensityANDfertilityratedata.csv", function(data) {
     
     //Set input domain for pop. density color scale
     colorPDdata.domain([
@@ -65,7 +65,7 @@ d3.csv("actualpopdensitydata.csv", function(data) {
     ]);
     
     //Load in GeoJSON data for Italy (lv1 GeoJSON attributes -> 20 regions of Italy)
-    d3.json("gadm36_ITA_1small.json", function(json) {
+    d3.json("Italy.json", function(json) {
 
         //Merge the pop. density/fertility rate data with Italy GeoJSON data
         //Loop through once for each region to get population, area, and fertility rate data
